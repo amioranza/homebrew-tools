@@ -7,7 +7,7 @@ class Sm2env < Formula
   license "MIT"
 
   def install
-    bin.install "v0.1.0/sm2env"
+    bin.install Dir["v0.1.0/*"].first
   end
 
   test do
