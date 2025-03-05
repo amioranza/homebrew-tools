@@ -7,7 +7,9 @@ class Sm2env < Formula
   license "MIT"
 
   def install
-    system "tar", "-xzf", "sm2env-v0.1.0-x86_64-apple-darwin.tar.gz"
+    # Extract the tarball
+    system "tar", "xf", cached_download, "-C", buildpath
+    # Install the binary
     bin.install "v0.1.0/sm2env"
   end
 
