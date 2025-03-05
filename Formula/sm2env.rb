@@ -10,7 +10,7 @@ class Sm2env < Formula
     # Extract the tarball
     system "tar", "xf", cached_download, "-C", buildpath
     # Install the binary
-    bin.install "v0.1.2/sm2env"
+    bin.install "sm2env"
   end
 
   test do
