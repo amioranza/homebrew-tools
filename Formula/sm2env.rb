@@ -1,9 +1,9 @@
 class Sm2env < Formula
   desc "CLI tool to fetch AWS Secrets Manager secrets and save them as .env files"
   homepage "https://github.com/amioranza/sm2env"
-  url "https://github.com/amioranza/sm2env/releases/download/v0.1.2/sm2env-v0.1.2-x86_64-apple-darwin.tar.gz"
-  sha256 "94287ac71ce902631231fffa7ac8de7d25a0fd5dea16da5e205c36c210b5cfab"
-  version "0.1.2"
+  url "https://github.com/amioranza/sm2env/releases/download/v0.1.3/sm2env-v0.1.3-x86_64-apple-darwin.tar.gz"
+  sha256 "f66b367344f71c7f7d810fc542109c27c9e5cf1b958a396bc4f79a95fadb1dfd"
+  version "0.1.3"
   license "MIT"
 
   def install
