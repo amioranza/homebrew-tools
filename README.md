@@ -1,10 +1,14 @@
 # Homebrew Tools
 
-A collection of Homebrew formulae for my personal tools.
+A collection of Homebrew formulae and casks for my personal tools.
 
 ## Available Formulae
 
 - [sm2env](https://github.com/amioranza/sm2env) - CLI tool to fetch AWS Secrets Manager secrets and save them as .env files
+
+## Available Casks
+
+- [kubelizeme](https://git.mdcnet.casa/amioranza/kubelizeme) - Native desktop Kubernetes manager
 
 ## Installation
 
@@ -12,15 +16,17 @@ A collection of Homebrew formulae for my personal tools.
 # Add the tap
 brew tap amioranza/tools
 
-# Install sm2env
-brew install sm2env
+# Install sm2env (CLI)
+brew install amioranza/tools/sm2env
+
+# Install kubelizeme (desktop app)
+brew install --cask amioranza/tools/kubelizeme
 ```
 
 ## Updating
 
-When a new version is released, update the formula with:
-
 ```bash
 brew update
-brew upgrade sm2env
+brew upgrade amioranza/tools/sm2env
+brew upgrade --cask amioranza/tools/kubelizeme
 ```
