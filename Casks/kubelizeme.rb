@@ -7,6 +7,11 @@ cask "kubelizeme" do
   desc "Native desktop Kubernetes manager"
   homepage "https://git.mdcnet.casa/amioranza/kubelizeme"
 
+  preflight do
+    system_command "/usr/bin/xattr",
+      args: ["-cr", "#{staged_path}/kubelizeme.app"]
+  end
+
   app "kubelizeme.app"
 
   zap trash: [
