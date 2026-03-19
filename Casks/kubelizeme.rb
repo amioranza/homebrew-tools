@@ -1,11 +1,16 @@
 cask "kubelizeme" do
   version "1.1.0"
-  sha256 "73adfec059b435f5fca4d295b83a83c9bdd8707aacc4ae117daf89a4def8bafd"
+  sha256 "4bc0981ac32004d14e50d052e67257fe3055dd332fc05411c9837f659b7d787e"
 
   url "https://releases.mioranza.tech/kubelizeme-v1.1.0.dmg"
   name "Kubelizeme"
   desc "Native desktop Kubernetes manager"
   homepage "https://git.mdcnet.casa/amioranza/kubelizeme"
+
+  preflight do
+    system_command "/usr/bin/xattr",
+      args: ["-cr", "\#{staged_path}/kubelizeme.app"]
+  end
 
   app "kubelizeme.app"
 
