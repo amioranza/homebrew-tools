@@ -9,7 +9,7 @@ cask "kubelizeme" do
 
   preflight do
     system_command "/usr/bin/xattr",
-      args: ["-cr", "\#{staged_path}/kubelizeme.app"]
+      args: ["-cr", "#{staged_path}/kubelizeme.app"]
   end
 
   app "kubelizeme.app"
