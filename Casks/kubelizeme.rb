@@ -1,6 +1,6 @@
 cask "kubelizeme" do
   version "1.4.4"
-  sha256 "a4cd5efb60d99d3666ea9637f4c6bde58fefcfa05841638570d125ca36e50863"
+  sha256 "1364a8ad60655f8d04bda27a554ac281ce57ad09af14c9fcebfefe421fa2dfe3"
 
   url "https://releases.mioranza.tech/kubelizeme-v1.4.4.dmg"
   name "Kubelizeme"
