@@ -1,8 +1,8 @@
 cask "kubelizeme" do
-  version "1.8.7"
-  sha256 "270e3255f4db71b8824cc30477ef98b83a9c8613f0b58a77c0e928828e0ed37f"
+  version "1.8.8"
+  sha256 "76bb38af424e8740341c64d54fc847365cb091cd9d71fee334ea645e0925a27b"
 
-  url "https://releases.mioranza.tech/kubelizeme-v1.8.7.dmg"
+  url "https://releases.mioranza.tech/kubelizeme-v1.8.8.dmg"
   name "Kubelizeme"
   desc "Native desktop Kubernetes manager"
   homepage "https://mioranza.tech/kubelizeme.html"
