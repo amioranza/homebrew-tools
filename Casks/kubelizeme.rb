@@ -1,23 +1,37 @@
 cask "kubelizeme" do
-  version "1.8.12"
-  sha256 "92f40836f4386d38854b5a32be56703d0ab5183c579a99886546132da0c5898c"
+  version "1.9.0"
+  sha256 "a4681aa59a964823f6b807a9b37a8bc24b8724b6d7444ec6938140ec09fe574b"
 
-  url "https://releases.mioranza.tech/kubelizeme-v1.8.12.dmg"
+  url "https://releases.mioranza.tech/kubelizeme-v1.9.0.dmg"
   name "Kubelizeme"
   desc "Native desktop Kubernetes manager"
   homepage "https://mioranza.tech/kubelizeme.html"
 
-  preflight do
-    system_command "/usr/bin/xattr",
-      args: ["-cr", "#{staged_path}/kubelizeme.app"]
-  end
+  depends_on :macos
 
   app "kubelizeme.app"
 
+  # Homebrew 7 install steps: declarative (sandboxed), so the path xattr
+  # writes to is declared; `preflight do ... system_command` is deprecated.
+  preflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-cr", "{{staged_path}}/kubelizeme.app"],
+        writable_paths: ["kubelizeme.app"],
+        writable_base:  :staged_path
+  end
+
   zap trash: [
     "~/Library/Application Support/com.amioranza.kubelizeme",
+    "~/Library/Application Support/me.kubelize.app",
+    "~/Library/Application Support/me.kubelize.app.migrated",
     "~/Library/Caches/com.amioranza.kubelizeme",
+    "~/Library/Caches/me.kubelize.app",
     "~/Library/Logs/com.amioranza.kubelizeme",
+    "~/Library/Logs/me.kubelize.app",
     "~/Library/Preferences/com.amioranza.kubelizeme.plist",
+    "~/Library/Preferences/me.kubelize.app.plist",
+    "~/Library/WebKit/com.amioranza.kubelizeme",
+    "~/Library/WebKit/me.kubelize.app",
+    "~/Library/WebKit/me.kubelize.app.migrated",
   ]
 end
